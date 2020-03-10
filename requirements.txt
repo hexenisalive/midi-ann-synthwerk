@@ -1,0 +1,6 @@
+music21
+numpy
+matplotlib
+sklearn
+gensim
+tensorflow
