@@ -74,7 +74,6 @@ def prepare_tensors():
             else:
                 batch_tensor_list.append(tf.stack(tensor_list[0 + (trim * 128): 128 + (trim * 128)]))
     batch_tensor = tf.stack(batch_tensor_list)
-    print(batch_tensor.shape)
     return batch_tensor
 
 

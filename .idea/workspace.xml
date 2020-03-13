@@ -1,98 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f62a9d0c-b72e-4700-9496-aba37d3f3e5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/beeth/appass_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/appass_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/appass_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/appass_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/appass_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/appass_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_4.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_les_adieux_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_les_adieux_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_les_adieux_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_les_adieux_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_les_adieux_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_les_adieux_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus10_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus10_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus10_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus10_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus10_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus10_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_4.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus90_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus90_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus90_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus90_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/elise.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/elise.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/mond_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/mond_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/mond_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/mond_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/mond_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/mond_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/pathetique_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/pathetique_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/pathetique_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/pathetique_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/pathetique_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/pathetique_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/waldstein_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/waldstein_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/waldstein_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/waldstein_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beeth/waldstein_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/waldstein_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chp_op18.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chp_op18.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chp_op31.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chp_op31.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p10.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p10.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p11.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p11.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p12.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p12.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p13.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p13.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p14.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p14.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p15.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p15.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p16.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p16.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p17.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p17.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p18.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p18.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p19.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p19.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p20.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p20.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p21.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p21.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p22.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p22.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p23.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p23.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p24.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p24.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p4.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p5.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p5.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p6.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p6.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p7.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p7.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p8.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p8.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn-p9.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p9.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op10_e01.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op10_e01.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op10_e05.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op10_e05.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op10_e12.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op10_e12.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op23.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op23.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e11.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e11.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e12.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e12.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e4.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op27_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op27_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op27_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op27_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op33_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op33_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op33_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op33_4.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_3.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_4.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op53.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op53.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op66.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op66.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op7_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op7_1.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chopin/chpn_op7_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op7_2.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/file.py" afterDir="false" />
+    <list default="true" id="f62a9d0c-b72e-4700-9496-aba37d3f3e5f" name="Default Changelist" comment="delete commented area in main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkl_files/dictionary.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/pkl_files/dictionary.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkl_files/w2v_vocab.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/pkl_files/w2v_vocab.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_april.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_april.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_august.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_august.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_dezember.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_dezember.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_februar.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_februar.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_januar.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_januar.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_juli.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_juli.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_juni.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_juni.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_maerz.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_maerz.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_mai.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_mai.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_november.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_november.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_oktober.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_oktober.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tschai/ty_september.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_september.mid" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,12 +18,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+            <state relative-caret-position="406">
+              <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
               <folding>
                 <element signature="e#89#112#0" expanded="true" />
                 <element signature="e#505#1652#0" />
-                <element signature="e#1682#2758#0" />
               </folding>
             </state>
           </provider>
@@ -147,8 +59,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main.py" />
         <option value="$PROJECT_DIR$/src/file.py" />
+        <option value="$PROJECT_DIR$/src/main.py" />
       </list>
     </option>
   </component>
@@ -180,6 +92,11 @@
             <path>
               <item name="midi-ann-synthwerk" type="b2602c69:ProjectViewProjectNode" />
               <item name="midi-ann-synthwerk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="midi-ann-synthwerk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="midi-ann-synthwerk" type="462c0819:PsiDirectoryNode" />
+              <item name="pkl_files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="midi-ann-synthwerk" type="b2602c69:ProjectViewProjectNode" />
@@ -257,7 +174,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584114390558</updated>
-      <workItem from="1584114393372" duration="1316000" />
+      <workItem from="1584114393372" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary="add optimization in 'prepare_tensors', fix dictionary in 'build_word2vec_model'">
       <created>1584114560716</created>
@@ -273,15 +190,28 @@
       <option name="project" value="LOCAL" />
       <updated>1584114996164</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add 'main', change project's file structure">
+      <created>1584115826821</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584115826821</updated>
+    </task>
+    <task id="LOCAL-00004" summary="delete commented area in main">
+      <created>1584116180700</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584116180700</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1316000" />
+    <option name="totallyTimeSpent" value="1999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -312,10 +242,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add optimization in 'prepare_tensors', fix dictionary in 'build_word2vec_model'" />
     <MESSAGE value="delete redundant python file" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete redundant python file" />
+    <MESSAGE value="add 'main', change project's file structure" />
+    <MESSAGE value="delete commented area in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete commented area in main" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/midi_ann_synthwerk$main.coverage" NAME="main Coverage Results" MODIFIED="1584115727061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/midi_ann_synthwerk$main.coverage" NAME="main Coverage Results" MODIFIED="1584116324812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/classes.py">
@@ -342,12 +274,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+        <state relative-caret-position="406">
+          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
           <folding>
             <element signature="e#89#112#0" expanded="true" />
             <element signature="e#505#1652#0" />
-            <element signature="e#1682#2758#0" />
           </folding>
         </state>
       </provider>
