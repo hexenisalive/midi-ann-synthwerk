@@ -14,11 +14,11 @@ def stream_to_file(stream, output_path):
 
 
 def save_file(file_name, data):
-    f = open(file_name + ".pkl", "wb")
+    f = open("../pkl_files/" + file_name + ".pkl", "wb")
     pickle.dump(data, f)
     f.close()
 
 
 def load_file(file_name):
-    with open(file_name + ".pkl", 'rb') as f:
+    with open("../pkl_files/" + file_name + ".pkl", 'rb') as f:
         return pickle.load(f)

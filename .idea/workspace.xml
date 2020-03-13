@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f62a9d0c-b72e-4700-9496-aba37d3f3e5f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/beeth/appass_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/appass_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/appass_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/appass_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/appass_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/appass_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_hammerklavier_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_hammerklavier_4.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_les_adieux_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_les_adieux_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_les_adieux_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_les_adieux_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_les_adieux_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_les_adieux_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus10_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus10_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus10_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus10_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus10_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus10_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus22_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus22_4.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus90_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus90_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/beethoven_opus90_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/beethoven_opus90_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/elise.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/elise.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/mond_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/mond_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/mond_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/mond_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/mond_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/mond_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/pathetique_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/pathetique_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/pathetique_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/pathetique_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/pathetique_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/pathetique_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/waldstein_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/waldstein_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/waldstein_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/waldstein_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beeth/waldstein_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/beeth/waldstein_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chp_op18.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chp_op18.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chp_op31.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chp_op31.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p10.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p10.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p11.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p11.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p12.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p12.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p13.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p13.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p14.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p14.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p15.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p15.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p16.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p16.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p17.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p17.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p18.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p18.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p19.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p19.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p20.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p20.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p21.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p21.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p22.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p22.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p23.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p23.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p24.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p24.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p4.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p5.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p5.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p6.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p6.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p7.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p7.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p8.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p8.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn-p9.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn-p9.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op10_e01.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op10_e01.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op10_e05.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op10_e05.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op10_e12.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op10_e12.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op23.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op23.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e11.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e11.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e12.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e12.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op25_e4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op25_e4.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op27_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op27_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op27_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op27_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op33_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op33_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op33_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op33_4.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_3.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_3.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op35_4.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op35_4.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op53.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op53.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op66.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op66.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op7_1.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op7_1.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chopin/chpn_op7_2.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/chopin/chpn_op7_2.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_april.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_april.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_august.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_august.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_dezember.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_dezember.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_februar.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_februar.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_januar.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_januar.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_juli.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_juli.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_juni.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_juni.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_maerz.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_maerz.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_mai.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_mai.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_november.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_november.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_oktober.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_oktober.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tschai/ty_september.mid" beforeDir="false" afterPath="$PROJECT_DIR$/MIDIs/tschai/ty_september.mid" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+              <folding>
+                <element signature="e#89#112#0" expanded="true" />
+                <element signature="e#505#1652#0" />
+                <element signature="e#1682#2758#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/encode_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-908">
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.py" />
+        <option value="$PROJECT_DIR$/src/file.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/midi-ann-synthwerk.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/webResources.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="477" />
+    <option name="y" value="-16" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="midi-ann-synthwerk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="midi-ann-synthwerk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="midi-ann-synthwerk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="midi-ann-synthwerk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maciej\PycharmProjects\midi-ann-synthwerk" />
+      <recent name="C:\Users\Maciej\PycharmProjects\midi-ann-synthwerk\MIDIs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="midi-ann-synthwerk" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f62a9d0c-b72e-4700-9496-aba37d3f3e5f" name="Default Changelist" comment="" />
+      <created>1584114390558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584114390558</updated>
+      <workItem from="1584114393372" duration="1316000" />
+    </task>
+    <task id="LOCAL-00001" summary="add optimization in 'prepare_tensors', fix dictionary in 'build_word2vec_model'">
+      <created>1584114560716</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584114560716</updated>
+    </task>
+    <task id="LOCAL-00002" summary="delete redundant python file">
+      <created>1584114996164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584114996164</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1316000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add optimization in 'prepare_tensors', fix dictionary in 'build_word2vec_model'" />
+    <MESSAGE value="delete redundant python file" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete redundant python file" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/midi_ann_synthwerk$main.coverage" NAME="main Coverage Results" MODIFIED="1584115727061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/classes.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/encode_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-908">
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+          <folding>
+            <element signature="e#89#112#0" expanded="true" />
+            <element signature="e#505#1652#0" />
+            <element signature="e#1682#2758#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

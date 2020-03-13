@@ -78,30 +78,28 @@ def prepare_tensors():
     return batch_tensor
 
 
-# prepare_data for : chopin / beeth / tschai
-# prepare_data('./tschai/')
+if __name__ == "__main__":
+    # prepare_data for : chopin / beeth / tschai
+    prepare_data('../MIDIs/tschai/')
+    build_word2vec_model()
 
-build_word2vec_model()
+    input_data = prepare_tensors()
 
-input_data = prepare_tensors()
+    """ 
+    
+    model = tf.keras.Sequential()
+    model.add(tf.keras.layers.LSTM(units=64, input_shape=(128, 3), return_sequences=False))
+    
+    model.summary()
+    """
 
-"""
-input_data = prepare_tensors()
-
-
-model = tf.keras.Sequential()
-model.add(tf.keras.layers.LSTM(units=64, input_shape=(128, 3), return_sequences=False))
-
-model.summary()
-"""
-
-"""
-# randomly generated output data for testing stream generation
-test_output_data = []
-for no_of_notes in range(128):
-    test_output_data.append([uniform(-1, 3), uniform(-0.5, 0.5), no_of_notes*0.5])
-
-stream = data_to_stream(test_output_data)
-stream_to_file(stream, "./test_output.mid")
-
-"""
+    """
+    # randomly generated output data for testing stream generation
+    test_output_data = []
+    for no_of_notes in range(128):
+        test_output_data.append([uniform(-1, 3), uniform(-0.5, 0.5), no_of_notes*0.5])
+    
+    stream = data_to_stream(test_output_data)
+    stream_to_file(stream, "../test_output.mid")
+    
+    """
