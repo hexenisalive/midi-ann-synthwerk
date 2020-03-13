@@ -9,7 +9,7 @@ from sklearn.decomposition import PCA
 from matplotlib import pyplot as plt
 from random import uniform
 from pprint import pprint
-
+from math import ceil
 
 from file import load_file, save_file, stream_to_file
 from decode_data import data_to_stream
@@ -20,7 +20,7 @@ def build_word2vec_model(plot: bool = False, annotate: bool = False):
     print("building model...")
 
     master_dict = load_file("dictionary")
-    sequence_dict = load_file("sequence")
+    sequence_dict = load_file("sequences")
     sequence_data = sequence_dict["sequences"]
     # based on sequence data generate word embeddings
     # where sentences are sequences of dictionary keys ('ChordG5G6', 'NoteD7', etc.)
@@ -52,7 +52,6 @@ def build_word2vec_model(plot: bool = False, annotate: bool = False):
 
 def prepare_tensors():
     batch_tensor_list = []
-    tensor = None
 
     master_dict = load_file('dictionary')
     sequence_dict = load_file('sequences')
@@ -61,17 +60,21 @@ def prepare_tensors():
 
     for sequence, offset in zip(sequence_data, offset_data):
         tensor_list = []
+        curr_offset = 0.0
         for i, (element_s, element_o) in enumerate(zip(sequence, offset)):
             tensor_list.append(tf.Variable([
                 master_dict[element_s]["coords"][0],
                 master_dict[element_s]["coords"][1],
-                element_o],
+                element_o - curr_offset],
                 tf.float32))
-            if i == 127:
-                tensor = tf.stack(tensor_list)
-                break
-        batch_tensor_list.append(tensor)
+            curr_offset = element_o
+        for trim in range(ceil(len(tensor_list)/128)):
+            if (trim + 1) * 128 > len(tensor_list):
+                batch_tensor_list.append(tf.stack(tensor_list[len(tensor_list)-128: len(tensor_list)]))
+            else:
+                batch_tensor_list.append(tf.stack(tensor_list[0 + (trim * 128): 128 + (trim * 128)]))
     batch_tensor = tf.stack(batch_tensor_list)
+    print(batch_tensor.shape)
     return batch_tensor
 
 
@@ -80,6 +83,7 @@ def prepare_tensors():
 
 build_word2vec_model()
 
+input_data = prepare_tensors()
 
 """
 input_data = prepare_tensors()
