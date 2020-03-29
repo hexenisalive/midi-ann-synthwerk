@@ -4,6 +4,7 @@ from matplotlib import pyplot as plt
 
 from file import load_file, save_file
 
+
 def build_word2vec_model(plot: bool = False, annotate: bool = False):
     print("building model...")
 
