@@ -1,9 +1,9 @@
 import music21 as mu
-from file import save_file, load_file, file_to_stream
 from os import listdir
 
+from file import save_file, file_to_stream
+
 master_dict = {}
-sequence_dict = {}
 sequence_data = []
 offset_data = []
 
@@ -75,7 +75,9 @@ def prepare_data(path):
     print("saving dictionary...")
     save_file("dictionary", master_dict)
 
+
     print("saving sequences...")
+    sequence_dict = {}
     sequence_dict.update({"sequences": sequence_data, "offsets": offset_data})
     save_file("sequences", sequence_dict)
 

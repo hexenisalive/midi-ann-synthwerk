@@ -22,11 +22,9 @@ def data_to_stream(data):
         # An existing dictionary key is given by "name_closest_coord".
         # It must be done outside the global dictionary to speed up the process
         # by not iterating through the whole dictionary
-
         curr_offset += normalize_offset(element[2])
         dict_key = name_closest_coord([element[0], element[1]])
         insert = copy.deepcopy(master_dict[dict_key]["element"])
-        print(element, dict_key)
         insert.id = str(new_id)
         insert.offset = curr_offset
         try:

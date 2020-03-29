@@ -1,4 +1,4 @@
-import pickle
+import pickle as pkl
 import music21 as mu
 
 
@@ -15,10 +15,10 @@ def stream_to_file(stream, output_path):
 
 def save_file(file_name, data):
     f = open("../pkl_files/" + file_name + ".pkl", "wb")
-    pickle.dump(data, f)
+    pkl.dump(data, f)
     f.close()
 
 
 def load_file(file_name):
     with open("../pkl_files/" + file_name + ".pkl", 'rb') as f:
-        return pickle.load(f)
+        return pkl.load(f)
