@@ -1,7 +1,7 @@
 import numpy as np
 import music21 as mu
 import copy
-from file import load_file
+from file import load_file, stream_to_file
 
 
 def data_to_stream(data):
@@ -22,7 +22,7 @@ def data_to_stream(data):
         # An existing dictionary key is given by "name_closest_coord".
         # It must be done outside the global dictionary to speed up the process
         # by not iterating through the whole dictionary
-        curr_offset += normalize_offset(element[2])
+        curr_offset += (np.round(element[2]*4.0))/4.0
         dict_key = name_closest_coord([element[0], element[1]])
         insert = copy.deepcopy(master_dict[dict_key]["element"])
         insert.id = str(new_id)
@@ -49,5 +49,6 @@ def name_closest_coord(coord):
     return words[int(np.argmin(dist))]
 
 
-def normalize_offset(offset):
-    return (np.round(offset*4.0))/4.0
+def prepare_output(data):
+    stream = data_to_stream(data)
+    stream_to_file(stream, "../output.mid")
