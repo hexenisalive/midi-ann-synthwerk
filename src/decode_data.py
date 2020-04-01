@@ -12,6 +12,7 @@ def data_to_stream(data):
     :return music21.stream:
     """
     master_dict = load_file("dictionary")
+    vocab_dict = load_file("w2v_vocab")
 
     stream = mu.stream.Stream()
     print("building stream...")
@@ -23,7 +24,7 @@ def data_to_stream(data):
         # It must be done outside the global dictionary to speed up the process
         # by not iterating through the whole dictionary
         curr_offset += (np.round(element[2]*4.0))/4.0
-        dict_key = name_closest_coord([element[0], element[1]])
+        dict_key = name_closest_coord([element[0], element[1]], vocab_dict)
         insert = copy.deepcopy(master_dict[dict_key]["element"])
         insert.id = str(new_id)
         insert.offset = curr_offset
@@ -34,14 +35,14 @@ def data_to_stream(data):
     return stream
 
 
-def name_closest_coord(coord):
+def name_closest_coord(coord, vocab):
     """
     Get the name of the element whose coordinate is the closest to one given.
 
     :param coord: User defined coordinates.
+    :param vocab: Vocabulary dictionary
     :return string:
     """
-    vocab = load_file("w2v_vocab")
     coords = vocab["coords"]
     words = vocab["words"]
     coords = np.asarray(coords)
