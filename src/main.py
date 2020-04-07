@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     prediction = model.predict(test_data)
     prepare_output(prediction)
-    # model.save('../models/model_' + gen_timestamp)
+    model.save('../models/model_' + gen_timestamp())
 
     print("all done")
 

@@ -53,4 +53,4 @@ def name_closest_coord(coord, vocab):
 
 def prepare_output(data):
     stream = data_to_stream(data)
-    stream_to_file(stream, '../outputs/output_' + gen_timestamp + '.mid')
+    stream_to_file(stream, '../outputs/output_' + gen_timestamp() + '.mid')
