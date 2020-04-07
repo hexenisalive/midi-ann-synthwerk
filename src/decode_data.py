@@ -1,8 +1,9 @@
 import numpy as np
 import music21 as mu
 import copy
-from file import load_file, stream_to_file
 
+from file import load_file, stream_to_file
+from utilities import gen_timestamp
 
 def data_to_stream(data):
     """
@@ -52,4 +53,4 @@ def name_closest_coord(coord, vocab):
 
 def prepare_output(data):
     stream = data_to_stream(data)
-    stream_to_file(stream, "../output.mid")
+    stream_to_file(stream, '../outputs/output_' + gen_timestamp + '.mid')
