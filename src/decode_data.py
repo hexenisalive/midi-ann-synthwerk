@@ -5,6 +5,7 @@ import copy
 from file import load_file, stream_to_file
 from utilities import gen_timestamp
 
+
 def data_to_stream(data):
     """
     Generate music21.stream basing on global dictionary and vocabulary generated through word2vec.
