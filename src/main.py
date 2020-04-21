@@ -11,23 +11,40 @@ from w2v import build_word2vec_model
 from prep_learn_data import prepare_tensors
 from decode_data import prepare_output
 from utilities import prompt_question, gen_noise_vector, gen_timestamp
-
+from file import load_file
 
 if __name__ == "__main__":
     # prepare_data for : chopin / beeth / tschai
-    if prompt_question("Build new input data dictionaries? (Make sure files 'dictionary.pkl', "
-                       "'sequences.pkl', 'w2v_vocab.pkl' exist in directory './pkl_files'.)"):
+    if prompt_question("Build new input data dictionaries?"):
         prepare_data('..\MIDIs\\chopin\\')
         build_word2vec_model()
+    else:
+        print('skipping...')
+        try:
+            load_file('dictionary')
+            load_file('sequences')
+            load_file('w2v_vocab')
+        except FileNotFoundError:
+            print("Input data dictionaries not found. Building new dictionaries.")
 
-    input_data, target_data = prepare_tensors(length_of_vector=128, partition=1)
+    if prompt_question("Build new tensors?"):
+        input_data, target_data = prepare_tensors(length_of_vector=128, partition=1)
+    else:
+        print('skipping...')
+        try:
+            input_data = load_file('input_tensor')
+            target_data = load_file('target_tensor')
+        except FileNotFoundError:
+            print("Tensors not found. Building new tensors.")
+            input_data, target_data = prepare_tensors(length_of_vector=128, partition=1)
 
     model = tf.keras.Sequential()
-    model.add(tf.keras.layers.CuDNNLSTM(3, input_shape=(128, 3), return_sequences=True))
-    model.add(tf.keras.layers.Dense(3))
+    model.add(tf.keras.layers.LSTM(3, input_shape=(128, 3), return_sequences=True))
+    model.add(tf.keras.layers.Dropout(0.1))
+    model.add(tf.keras.layers.Dense(3, activation='relu'))
     model.summary()
     model.compile(loss='mean_squared_error', optimizer='adam')
-    model.fit(input_data, target_data, epochs=100, verbose=1)
+    model.fit(input_data, target_data, epochs=10, verbose=1)
 
     if prompt_question("Save model?"):
         model.save('..\models\model_' + gen_timestamp())

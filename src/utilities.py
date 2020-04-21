@@ -24,8 +24,8 @@ def prompt_question(question):
     valid = {"yes": True, "y": True, "ye": True,
              "no": False, "n": False}
 
+    print(question + " [y/n] ")
     while True:
-        print(question + " [y/n] ")
         choice = input().lower()
         if choice in valid:
             return valid[choice]

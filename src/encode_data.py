@@ -75,7 +75,6 @@ def prepare_data(path):
     print("saving dictionary...")
     save_file("dictionary", master_dict)
 
-
     print("saving sequences...")
     sequence_dict = {}
     sequence_dict.update({"sequences": sequence_data, "offsets": offset_data})

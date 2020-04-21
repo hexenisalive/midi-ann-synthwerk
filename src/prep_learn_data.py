@@ -1,10 +1,16 @@
 import tensorflow as tf
-from math import ceil
 
-from file import load_file
+from file import save_file, load_file
 
 
-def prepare_tensors(length_of_vector=128, partition=128):
+def prepare_tensors(length_of_vector=128, partition=1):
+    """
+    Divides a set of elements into overlapping subsets.
+
+    :param length_of_vector: Width of the partitioning window.
+    :param partition: Number of sequence elements between partitions.
+    :return: tf.Variable, tf.Variable
+    """
     batch_tensor_input = []
     batch_tensor_target = []
 
@@ -13,7 +19,6 @@ def prepare_tensors(length_of_vector=128, partition=128):
     sequence_data = sequence_dict["sequences"]
     offset_data = sequence_dict["offsets"]
 
-    print("Preparing sequences...")
     max_iterator = len(sequence_data)
     for iterator, (sequence, offset) in enumerate(zip(sequence_data, offset_data)):
         print("Processing sequence:", iterator+1, "/", max_iterator)
@@ -38,6 +43,8 @@ def prepare_tensors(length_of_vector=128, partition=128):
     target_data = tf.stack(batch_tensor_target)
     print("Done... shape:", input_data.shape)
 
+    save_file('input_tensor', input_data)
+    save_file('target_tensor', target_data)
     return input_data, target_data
 
 
