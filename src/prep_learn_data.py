@@ -23,7 +23,6 @@ def prepare_tensors(length_of_vector=128, partition=1):
     for iterator, (sequence, offset) in enumerate(zip(sequence_data, offset_data)):
         print("Processing sequence:", iterator+1, "/", max_iterator)
         tensor_list = []
-        div_list = []
         curr_offset = 0.0
         for element_s, element_o in zip(sequence, offset):
             tensor_list.append(tf.Variable([
