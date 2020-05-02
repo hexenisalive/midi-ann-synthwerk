@@ -40,11 +40,11 @@ if __name__ == "__main__":
 
     model = tf.keras.Sequential()
     model.add(tf.keras.layers.LSTM(3, input_shape=(128, 3), return_sequences=True))
-    model.add(tf.keras.layers.Dropout(0.1))
-    model.add(tf.keras.layers.Dense(3, activation='relu'))
+    model.add(tf.keras.layers.Dropout(0.3))
+    model.add(tf.keras.layers.Dense(3, tf.keras.layers.Activation('relu')))
     model.summary()
     model.compile(loss='mean_squared_error', optimizer='adam')
-    model.fit(input_data, target_data, epochs=10, verbose=1)
+    model.fit(input_data, target_data, epochs=100, verbose=2)
 
     if prompt_question("Save model?"):
         model.save('..\models\model_' + gen_timestamp())
