@@ -44,7 +44,7 @@ if __name__ == "__main__":
     model.add(tf.keras.layers.Dense(3, tf.keras.layers.Activation('relu')))
     model.summary()
     model.compile(loss='mean_squared_error', optimizer='adam')
-    model.fit(input_data, target_data, epochs=100, verbose=2)
+    model.fit(input_data, target_data, epochs=1000, verbose=2)
 
     if prompt_question("Save model?"):
         model.save('..\models\model_' + gen_timestamp())
