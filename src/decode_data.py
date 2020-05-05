@@ -52,6 +52,6 @@ def name_closest_coord(coord, vocab):
     return words[int(np.argmin(dist))]
 
 
-def prepare_output(data):
+def prepare_output(data, iteration):
     stream = data_to_stream(data)
-    stream_to_file(stream, '../outputs/output_' + gen_timestamp() + '.mid')
+    stream_to_file(stream, '../outputs/output_' + gen_timestamp() + '___' + iteration + '.mid')
