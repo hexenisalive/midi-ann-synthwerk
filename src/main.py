@@ -11,9 +11,8 @@ from encode_data import prepare_data
 from w2v import build_word2vec_model
 from prep_learn_data import prepare_tensors
 from decode_data import prepare_output
-from utilities import prompt_question, gen_noise_vector, gen_timestamp
+from utilities import *
 from file import load_file
-
 
 
 if __name__ == "__main__":
@@ -66,15 +65,21 @@ if __name__ == "__main__":
 
     if prompt_question("Build sequences on known models?"):
         noise_vec = gen_noise_vector(batch_size=1, time_steps=128)
-        for file in listdir('..\models'):
-            print("processing: %s..." % file)
-            model = tf.keras.models.load_model('../models/' + file)
+        prepare_output(np.reshape(noise_vec, (128, 3)), 0, "noise")
+        vocab = load_file("w2v_vocab")
+        coords = np.asarray(vocab["coords"])
+        coords = np.asarray(coords)
+        for directory in listdir('..\models'):
+            print("processing: %s..." % directory)
+            model = tf.keras.models.load_model('../models/' + directory)
             curr_noise = noise_vec
             for iteration in range(100):
                 curr_noise = model.predict(curr_noise)
+                curr_noise = rectify_vector(curr_noise, coords)
                 if iteration == 0 or iteration == 9 or iteration == 24 or iteration == 99:
                     prediction = np.reshape(curr_noise, (128, 3))
-                    prepare_output(prediction, iteration)
+                    prepare_output(prediction, iteration, directory)
+
     else:
         print('skipping...')
 

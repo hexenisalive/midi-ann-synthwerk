@@ -15,6 +15,9 @@ def data_to_stream(data):
     """
     master_dict = load_file("dictionary")
     vocab_dict = load_file("w2v_vocab")
+    coords = vocab_dict["coords"]
+    coords = np.asarray(coords)
+    words = vocab_dict["words"]
 
     stream = mu.stream.Stream()
     print("building stream...")
@@ -26,7 +29,7 @@ def data_to_stream(data):
         # It must be done outside the global dictionary to speed up the process
         # by not iterating through the whole dictionary
         curr_offset += (np.round(element[2]*4.0))/4.0
-        dict_key = name_closest_coord([element[0], element[1]], vocab_dict)
+        dict_key = name_closest_coord([element[0], element[1]], coords, words)
         insert = copy.deepcopy(master_dict[dict_key]["element"])
         insert.id = str(new_id)
         insert.offset = curr_offset
@@ -37,7 +40,7 @@ def data_to_stream(data):
     return stream
 
 
-def name_closest_coord(coord, vocab):
+def name_closest_coord(coord, coords, words):
     """
     Get the name of the element whose coordinate is the closest to one given.
 
@@ -45,13 +48,10 @@ def name_closest_coord(coord, vocab):
     :param vocab: Vocabulary dictionary
     :return string:
     """
-    coords = vocab["coords"]
-    words = vocab["words"]
-    coords = np.asarray(coords)
     dist = np.sum((coords - coord)**2, axis=1)
     return words[int(np.argmin(dist))]
 
 
-def prepare_output(data, iteration):
+def prepare_output(data, iteration, tag=""):
     stream = data_to_stream(data)
-    stream_to_file(stream, '../outputs/output_' + gen_timestamp() + '__' + str(iteration) + '.mid')
+    stream_to_file(stream, '../outputs/output_' + gen_timestamp() + '_' + tag + '_' + str(iteration) + '.mid')
