@@ -15,8 +15,7 @@ def data_to_stream(data):
     """
     master_dict = load_file("dictionary")
     vocab_dict = load_file("w2v_vocab")
-    coords = vocab_dict["coords"]
-    coords = np.asarray(coords)
+    coords = np.asarray(vocab_dict["coords"])
     words = vocab_dict["words"]
 
     stream = mu.stream.Stream()

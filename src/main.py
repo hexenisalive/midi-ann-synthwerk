@@ -30,7 +30,7 @@ if __name__ == "__main__":
             print("Input data dictionaries not found. Building new dictionaries.")
 
     if prompt_question("Build new tensors?"):
-        input_data, target_data = prepare_tensors(length_of_vector=128, partition=1)
+        input_data, target_data = prepare_tensors()
     else:
         print('skipping...')
         try:
@@ -38,7 +38,7 @@ if __name__ == "__main__":
             target_data = load_file('target_tensor')
         except FileNotFoundError:
             print("Tensors not found. Building new tensors.")
-            input_data, target_data = prepare_tensors(length_of_vector=128, partition=1)
+            input_data, target_data = prepare_tensors()
 
     if prompt_question("Build new model?"):
         model = tf.keras.Sequential()
@@ -47,35 +47,35 @@ if __name__ == "__main__":
         model.add(tf.keras.layers.Dense(3, tf.keras.layers.Activation('relu')))
         model.summary()
         model.compile(loss='mean_squared_error', optimizer='adam')
-        model.fit(input_data, target_data, epochs=10, verbose=1)
+        model.fit(input_data, target_data, epochs=1, verbose=1)
 
         if prompt_question("Save model?"):
             model.save('..\models\model_' + gen_timestamp())
 
         if prompt_question("Build sequence?"):
-            noise_vec = gen_noise_vector(batch_size=1, time_steps=128)
-            iter_num = 0
-            for iteration in range(1):
-                noise_vec = model.predict(noise_vec)
-                iter_num = iteration
+            noise_vec = gen_noise_vector()
+            prepare_output(np.reshape(noise_vec, (128, 3)), 0, "noise")
+            vocab = load_file("w2v_vocab")
+            coords = np.asarray(vocab["coords"])
+            noise_vec = rectify_vector(noise_vec, coords)
+            noise_vec = model.predict(noise_vec)
             prediction = np.reshape(noise_vec, (128, 3))
-            prepare_output(prediction, iter_num)
+            prepare_output(prediction, 0)
     else:
         print('skipping...')
 
     if prompt_question("Build sequences on known models?"):
-        noise_vec = gen_noise_vector(batch_size=1, time_steps=128)
+        noise_vec = gen_noise_vector()
         prepare_output(np.reshape(noise_vec, (128, 3)), 0, "noise")
         vocab = load_file("w2v_vocab")
         coords = np.asarray(vocab["coords"])
-        coords = np.asarray(coords)
         for directory in listdir('..\models'):
             print("processing: %s..." % directory)
             model = tf.keras.models.load_model('../models/' + directory)
             curr_noise = noise_vec
             for iteration in range(100):
-                curr_noise = model.predict(curr_noise)
                 curr_noise = rectify_vector(curr_noise, coords)
+                curr_noise = model.predict(curr_noise)
                 if iteration == 0 or iteration == 9 or iteration == 24 or iteration == 99:
                     prediction = np.reshape(curr_noise, (128, 3))
                     prepare_output(prediction, iteration, directory)
