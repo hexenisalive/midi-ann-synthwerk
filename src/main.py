@@ -65,20 +65,18 @@ if __name__ == "__main__":
         print('skipping...')
 
     if prompt_question("Build sequences on known models?"):
-        noise_vec = gen_noise_vector()
+        noise_vec = gen_partial_vector(length=64, offset=64)
         prepare_output(np.reshape(noise_vec, (128, 3)), 0, "noise")
         vocab = load_file("w2v_vocab")
         coords = np.asarray(vocab["coords"])
         for directory in listdir('..\models'):
             print("processing: %s..." % directory)
             model = tf.keras.models.load_model('../models/' + directory)
-            curr_noise = noise_vec
-            for iteration in range(100):
-                curr_noise = rectify_vector(curr_noise, coords)
-                curr_noise = model.predict(curr_noise)
-                if iteration == 0 or iteration == 9 or iteration == 24 or iteration == 99:
-                    prediction = np.reshape(curr_noise, (128, 3))
-                    prepare_output(prediction, iteration, directory)
+
+            noise_vec = rectify_vector(noise_vec, coords)
+            noise_vec = model.predict(noise_vec)
+            prediction = np.reshape(noise_vec, (128, 3))
+            prepare_output(prediction, 0, directory)
 
     else:
         print('skipping...')
