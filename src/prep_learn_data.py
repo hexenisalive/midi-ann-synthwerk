@@ -1,5 +1,4 @@
 import tensorflow as tf
-
 from file import save_file, load_file
 
 
@@ -49,6 +48,6 @@ def prepare_tensors(length_of_vector=128, partition=1):
 
 def div_tensor_list(tensor_list, length_of_vector):
     div_list = []
-    for iterator in range(len(tensor_list) - length_of_vector - 1):
+    for iterator in range(len(tensor_list) - length_of_vector + 1):
         div_list.append(tensor_list[iterator: iterator+length_of_vector])
     return div_list
