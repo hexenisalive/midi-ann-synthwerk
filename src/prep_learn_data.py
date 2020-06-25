@@ -2,7 +2,7 @@ import tensorflow as tf
 from file import save_file, load_file
 
 
-def prepare_tensors(length_of_vector=128, partition=1):
+def prepare_tensors(length_of_vector=128):
     """
     Divides a set of elements into overlapping subsets.
 
@@ -33,8 +33,8 @@ def prepare_tensors(length_of_vector=128, partition=1):
 
         div_list = div_tensor_list(tensor_list, length_of_vector)
 
-        batch_tensor_input += div_list[:-1:partition]
-        batch_tensor_target += div_list[1::partition]
+        batch_tensor_input += div_list[:-1]
+        batch_tensor_target += div_list[1:]
 
     print("Building tensors...")
     input_data = tf.stack(batch_tensor_input)
