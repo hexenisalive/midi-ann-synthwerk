@@ -66,9 +66,9 @@ if __name__ == "__main__":
         zero_vec = gen_zero_vector()
         partial_vec = gen_partial_vector(length=64, offset=32)
 
-        prepare_output(np.reshape(noise_vec, (128, 3)), 0, "noise")
-        prepare_output(np.reshape(zero_vec, (128, 3)), 0, "zero")
-        prepare_output(np.reshape(partial_vec, (128, 3)), 0, "partial")
+        prepare_output(np.reshape(noise_vec, (128, 3)), "noise")
+        prepare_output(np.reshape(zero_vec, (128, 3)), "zero")
+        prepare_output(np.reshape(partial_vec, (128, 3)), "partial")
 
         vocab = load_file("w2v_vocab")
         coords = np.asarray(vocab["coords"])
@@ -86,9 +86,12 @@ if __name__ == "__main__":
             zero_vec_pred = model.predict(zero_vec)
             partial_vec_pred = model.predict(partial_vec)
 
-            prepare_output(np.reshape(noise_vec_pred, (128, 3)), 0, directory + "_noise")
-            prepare_output(np.reshape(zero_vec_pred, (128, 3)), 0, directory + "_zero")
-            prepare_output(np.reshape(partial_vec_pred, (128, 3)), 0, directory + "_partial")
+            prepare_output(np.reshape(
+                noise_vec_pred, (128, 3)), directory + "_noise")
+            prepare_output(
+                np.reshape(zero_vec_pred, (128, 3)), directory + "_zero")
+            prepare_output(
+                np.reshape(partial_vec_pred, (128, 3)), directory + "_partial")
 
     else:
         print('skipping...')
