@@ -6,7 +6,8 @@ import tensorflow as tf
 from file import load_file
 
 
-def gen_noise_vector(batch_size=1, time_steps=128, length=128, offset=0):
+def gen_noise_vector(batch_size=1, time_steps=128,
+                     length=128, offset=0):
     vocab = load_file("w2v_vocab")
     coords = np.asarray(vocab["coords"])
     test_pred_data = []
@@ -18,9 +19,12 @@ def gen_noise_vector(batch_size=1, time_steps=128, length=128, offset=0):
                 temp_test_pred_data.append([0, 0, rn.uniform(0, 1)])
 
             for no_of_notes in range(length):
-                temp_test_pred_data.append([rn.uniform(np.argmin(coords[0]), np.argmax(coords[0])),
-                                       rn.uniform(np.argmin(coords[1]), np.argmax(coords[1])),
-                                       rn.uniform(0, 1)])
+                temp_test_pred_data.append(
+                    [rn.uniform(np.argmin(coords[0]),
+                                np.argmax(coords[0])),
+                     rn.uniform(np.argmin(coords[1]),
+                                np.argmax(coords[1])),
+                     rn.uniform(0, 1)])
 
             for no_of_notes_off in range(time_steps-length-offset):
                 temp_test_pred_data.append([0, 0, rn.uniform(0, 1)])
