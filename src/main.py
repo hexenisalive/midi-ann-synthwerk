@@ -5,7 +5,6 @@
 
 import tensorflow as tf
 import numpy as np
-from sklearn.utils import shuffle
 from os import listdir
 from encode_data import prepare_data
 from w2v import build_word2vec_model
