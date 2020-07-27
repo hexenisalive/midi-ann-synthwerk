@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 from file import save_file, load_file
 
 
@@ -8,7 +9,7 @@ def prepare_tensors(length_of_vector=128):
 
     :param length_of_vector: Width of the partitioning window.
     :param partition: Number of sequence elements between partitions.
-    :return: tf.Variable, tf.Variable
+    :return: tf.Variable, tf.Variable, tf.Variable, tf.Variable
     """
     batch_tensor_input = []
     batch_tensor_target = []
@@ -37,13 +38,20 @@ def prepare_tensors(length_of_vector=128):
         batch_tensor_target += div_list[1:]
 
     print("Building tensors...")
-    input_data = tf.stack(batch_tensor_input)
-    target_data = tf.stack(batch_tensor_target)
-    print("Done... shape:", input_data.shape)
+    separator = int(np.round(len(batch_tensor_input)*0.8))
+
+    input_test = tf.stack(batch_tensor_input[separator:])
+    input_data = tf.stack(batch_tensor_input[:separator])
+
+    target_test = tf.stack(batch_tensor_target[separator:])
+    target_data = tf.stack(batch_tensor_target[:separator])
 
     save_file('input_tensor', input_data)
     save_file('target_tensor', target_data)
-    return input_data, target_data
+
+    save_file('input_test_tensor', input_test)
+    save_file('target_test_tensor', target_test)
+    return input_data, target_data, input_test, target_test
 
 
 def div_tensor_list(tensor_list, length_of_vector):
