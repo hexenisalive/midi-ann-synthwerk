@@ -47,9 +47,14 @@ if __name__ == "__main__":
 
     if prompt_question("Build new model?"):
         model = tf.keras.Sequential()
-        model.add(tf.keras.layers.LSTM(3, input_shape=(128, 3), return_sequences=True))
-        model.add(tf.keras.layers.Dropout(0.3))
-        model.add(tf.keras.layers.Dense(3, tf.keras.layers.Activation('relu')))
+        model.add(tf.keras.layers.LSTM(
+            3, input_shape=(128, 3), return_sequences=True))
+        model.add(tf.keras.layers.LSTM(
+            3, input_shape=(128, 3), return_sequences=True))
+        model.add(tf.keras.layers.LSTM(
+            3, input_shape=(128, 3), return_sequences=True))
+        model.add(tf.keras.layers.Dense(
+            3, tf.keras.layers.Activation('relu')))
         model.summary()
         model.compile(loss='mean_squared_error', optimizer='adam')
         model.fit(input_data, target_data, epochs=10, verbose=1)
@@ -76,6 +81,7 @@ if __name__ == "__main__":
         noise_vec = rectify_vector(noise_vec, coords)
         zero_vec = rectify_vector(zero_vec, coords)
         partial_vec = rectify_vector(partial_vec, coords)
+
 
         for directory in listdir('..\models'):
             print("processing: %s..." % directory)
