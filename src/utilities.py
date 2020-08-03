@@ -2,6 +2,7 @@ import numpy as np
 import random as rn
 import datetime as dt
 import tensorflow as tf
+import music21 as mu
 
 from file import load_file
 
@@ -104,3 +105,9 @@ def prompt_question(question):
 
 def gen_timestamp():
     return dt.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+
+def plot_midi(path):
+    midi = mu.converter.parse(path)
+    plot = mu.graph.plot.HorizontalBarPitchSpaceOffset(midi)
+    plot.run()

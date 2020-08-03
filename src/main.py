@@ -12,14 +12,14 @@ from prep_learn_data import prepare_tensors
 from decode_data import prepare_output
 from utilities import prompt_question, gen_noise_vector, \
     gen_zero_vector, gen_partial_vector, gen_timestamp, \
-    rectify_vector
+    rectify_vector, plot_midi
 from file import load_file
 
 
 if __name__ == "__main__":
     # prepare_data for : chopin / beeth / tschai / c_major-small / c_major
     if prompt_question("Build new input data dictionaries?"):
-        prepare_data('..\MIDIs\\chopin\\')
+        prepare_data('..\MIDIs\\c_major-small\\')
         build_word2vec_model()
         input_data, target_data, input_test, target_test = prepare_tensors()
     else:
@@ -98,4 +98,6 @@ if __name__ == "__main__":
     else:
         print('skipping...')
 
-
+    if prompt_question("Plot known sequences?"):
+        for directory in listdir('..\outputs'):
+            plot_midi('../outputs/' + directory)
