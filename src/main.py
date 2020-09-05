@@ -18,8 +18,9 @@ from file import load_file
 
 if __name__ == "__main__":
     # prepare_data for : chopin / beeth / tschai / c_major-small / c_major
+    dat_loc = "chopin"
     if prompt_question("Build new input data dictionaries?"):
-        prepare_data('..\MIDIs\\c_major-small\\')
+        prepare_data('..\MIDIs\\'+ dat_loc + '\\')
         build_word2vec_model()
         input_data, target_data, input_test, target_test = prepare_tensors()
     else:
@@ -31,7 +32,7 @@ if __name__ == "__main__":
         except FileNotFoundError:
             print("Input data dictionaries not found. "
                   "Building new dictionaries.")
-            prepare_data('..\MIDIs\\chopin\\')
+            prepare_data('..\MIDIs\\'+ dat_loc + '\\')
             build_word2vec_model()
             input_data, target_data, input_test, target_test = prepare_tensors()
         try:
@@ -47,10 +48,6 @@ if __name__ == "__main__":
 
     if prompt_question("Build new model?"):
         model = tf.keras.Sequential()
-        model.add(tf.keras.layers.LSTM(
-            3, input_shape=(128, 3), return_sequences=True))
-        model.add(tf.keras.layers.LSTM(
-            3, input_shape=(128, 3), return_sequences=True))
         model.add(tf.keras.layers.LSTM(
             3, input_shape=(128, 3), return_sequences=True))
         model.add(tf.keras.layers.Dense(
@@ -101,3 +98,5 @@ if __name__ == "__main__":
     if prompt_question("Plot known sequences?"):
         for directory in listdir('..\outputs'):
             plot_midi('../outputs/' + directory)
+    else:
+        print('skipping...')
