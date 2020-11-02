@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_2020-09-13_02_16_[Default_Changelist]" date="1599956215187" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020-09-13_02_16_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2020-09-13 02:16 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="pkl_files/w2v_vocab.pkl" />
+    <option name="AFTER_PATH" value="pkl_files/w2v_vocab.pkl" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020-09-13_02_16_[Default_Changelist]/w2v_vocab.pkl" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="pkl_files/target_tensor.pkl" />
+    <option name="AFTER_PATH" value="pkl_files/target_tensor.pkl" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020-09-13_02_16_[Default_Changelist]/target_tensor.pkl" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="pkl_files/input_tensor.pkl" />
+    <option name="AFTER_PATH" value="pkl_files/input_tensor.pkl" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020-09-13_02_16_[Default_Changelist]/input_tensor.pkl" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="pkl_files/dictionary.pkl" />
+    <option name="AFTER_PATH" value="pkl_files/dictionary.pkl" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020-09-13_02_16_[Default_Changelist]/dictionary.pkl" />
+  </binary>
+</changelist>

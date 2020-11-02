@@ -2,10 +2,6 @@ import pickle as pkl
 import music21 as mu
 
 
-def file_to_stream(path):
-    return mu.converter.parse(path).recurse().notes.sorted
-
-
 def stream_to_file(stream, output_path):
     mf = mu.midi.translate.streamToMidiFile(stream)
     mf.open(output_path, 'wb')

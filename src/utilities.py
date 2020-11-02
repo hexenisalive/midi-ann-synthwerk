@@ -7,6 +7,16 @@ import music21 as mu
 from file import load_file
 
 
+def print_progress(iteration, total, prefix='', suffix='', decimals=1, length=50, fill='█'):
+    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    filled = int(length * iteration // total)
+    bar = fill * filled + '-' * (length - filled)
+    if iteration != total:
+        print(f'\r{prefix} |{bar}| Completed: {percent}% ({iteration}/{total}) | Processing: {suffix}', end="")
+    else:
+        print(f'\r{prefix} |{bar}| {percent}% ({iteration}/{total}) All completed.')
+
+
 def gen_noise_vector(batch_size=1, time_steps=128,
                      length=128, offset=0):
     vocab = load_file("w2v_vocab")
