@@ -1,6 +1,7 @@
 import music21 as mu
 import pretty_midi as pm
 from os import listdir, remove
+from copy import deepcopy
 from utilities import print_progress
 from file import stream_to_file, save_file, load_file
 
@@ -30,9 +31,13 @@ class MidiHandler:
         print("Split files found in: " + self.__split_path + " - (" +
               str(len(listdir(self.__split_path))) + " files found)")
         print("Drum splitting is " + self.__splitter.drum_splitter_status() + ".")
+        print("Uniform tempo is " + self.__splitter.uniform_tempo_status() + ".")
 
     def toggle_drum_splitter(self):
         self.__splitter.extract_drums = not self.__splitter.extract_drums
+
+    def toggle_uniform_tempo(self):
+        self.__splitter.uniform_tempo = not self.__splitter.uniform_tempo
 
     def prepare_data(self):
         """
@@ -171,10 +176,11 @@ class MidiSplitter:
     MidiSplitter is a class that is capable of dividing complex MIDI files and returning multiple
     files for each instrument track that is found in the input file.
     """
-    def __init__(self, input_path: str, split_path: str, extract_drums: bool = True):
+    def __init__(self, input_path: str, split_path: str, extract_drums: bool = True, uniform_tempo: bool = True):
         self.instruments_dict = {}
         self.__input_path = input_path
         self.__split_path = split_path
+        self.uniform_tempo = uniform_tempo
         self.extract_drums = extract_drums
 
     def split_midi(self, file_name: str):
@@ -195,11 +201,18 @@ class MidiSplitter:
 
         part_tag = 0
         for instrument in pretty_mf.instruments:
-            # temporary MIDI for a single instrument is created and has copied values from the input MIDI
-            temp_pretty = pm.PrettyMIDI(initial_tempo=init_tempo)
-            temp_pretty.time_signature_changes = pretty_mf.time_signature_changes
-            # a single instrument is appended onto ints instrument list, with it all its notes
-            temp_pretty.instruments.append(instrument)
+            if self.uniform_tempo:
+                # temporary MIDI for a single instrument is created and has copied values from the input MIDI
+                temp_pretty = pm.PrettyMIDI(initial_tempo=init_tempo)
+                temp_pretty.time_signature_changes = pretty_mf.time_signature_changes
+                # a single instrument is appended onto ints instrument list, with it all its notes
+                temp_pretty.instruments.append(instrument)
+            else:
+                # deep copy should preserve all exact tempo changes throughout the song
+                temp_pretty = deepcopy(pretty_mf)
+                # all existing instruments are cleared and only one from the original file is appended
+                temp_pretty.instruments.clear()
+                temp_pretty.instruments.append(instrument)
 
             # assigning comments for music21.instrument
             edit = mu.editorial.Editorial()
@@ -226,6 +239,12 @@ class MidiSplitter:
 
     def drum_splitter_status(self):
         if self.extract_drums:
+            return "enabled"
+        else:
+            return "disabled"
+
+    def uniform_tempo_status(self):
+        if self.uniform_tempo:
             return "enabled"
         else:
             return "disabled"
