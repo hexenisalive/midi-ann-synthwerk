@@ -180,3 +180,60 @@ class StreamHandler:
     def clear_data(self):
         self.__input = []
         self.__target = []
+
+    def decode_data(self, predictions):
+        """
+        Prepares raw network output data and translates into music21 stream for MidiHandler to process further.
+        """
+        score = mu.stream.Score()
+
+        # assigning instrument from only the very first tag_line (MIDI program won't change throughout the song)
+        edit = mu.editorial.Editorial()
+        edit.true_program = str(int(predictions[0][1]))
+        edit.is_drum = str(bool(predictions[0][2]))
+
+        insert_instrument = mu.instrument.Instrument()
+        insert_instrument.editorial.comments.append(edit)
+
+        score.insert(0, insert_instrument)
+
+        # initial metronome to guarantee change detection
+        metronome = 0.0
+
+        for prediction in predictions:
+            # create clean measure
+            measure = mu.stream.Measure()
+            # extract tag_line
+            tag_line = prediction[0]
+
+            # assign time signature for current measure
+            time_signature = str(int(tag_line[3])) + "/" + str(int(tag_line[4]))
+            insert_time_signature = mu.meter.TimeSignature(time_signature)
+            measure.insert(0, insert_time_signature)
+
+            for line in prediction[1:]:
+                # detect change in metronome
+                if line[1] != metronome:
+                    # add metronome to measure
+                    metronome = line[1]
+                    insert_metronome = mu.tempo.MetronomeMark(number=metronome)
+                    measure.insert(line[0], insert_metronome)
+
+                # fill potential chord with pitches
+                notes = []
+                for element in line[3:]:
+                    note = mu.note.Note(int(element))
+                    if note.octave is not None:
+                        notes.append(note)
+                if len(notes) > 1:
+                    insert_element = mu.chord.Chord(notes)
+                else:
+                    insert_element = notes[0]
+                # add proper note length
+                insert_element.duration = line[2]
+                # append it onto measure
+                measure.insert(line[0], insert_element)
+            # add the measure to the final stream
+            score.insert(tag_line[0], measure)
+
+        return score
