@@ -11,6 +11,7 @@ from StreamHandler import StreamHandler
 if __name__ == "__main__":
     handler = MidiHandler()
     handler.clear_data()
+    handler.toggle_uniform_tempo()
     handler.prepare_data()
     s = handler.get_data()
 

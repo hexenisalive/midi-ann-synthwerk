@@ -1,6 +1,9 @@
 import tensorflow as tf
+import music21 as mu
 from utilities import print_progress
 from file import save_file, load_file
+
+TAG_LINE_LEN = 5
 
 
 class StreamHandler:
@@ -39,7 +42,10 @@ class StreamHandler:
         self.__input = []
         self.__target = []
 
-        if subsequence_width >= 6:
+        if subsequence_width >= TAG_LINE_LEN:
+
+            highest_width_loss = 0
+            highest_length_loss = 0
 
             pf = "Splitting parts to subsequences: "
             end = len(self.__sequences)
@@ -49,8 +55,15 @@ class StreamHandler:
                 # divide each sequence into measures that are defined by time signature
                 measures = sequence[0].makeMeasures()
 
-                # save initial tempo (dynamically changing tempos are not supported)
-                metronome = float(sequence[0].metronomeMarkBoundaries()[0][2].number)
+                # saving tempo (dynamically changing tempos are not supported)
+                boundaries = sequence[0].metronomeMarkBoundaries()
+                if len(boundaries) == 1:
+                    metronome = float(boundaries[0][2].number)
+                    uniform = True
+                else:
+                    metronome = 0.0
+                    uniform = False
+
                 # saving initial time signature
                 time_signature = sequence[0].timeSignature
 
@@ -65,13 +78,20 @@ class StreamHandler:
                 subsequences = []
 
                 for measure in measures:
-                    # creating subsequence for each measure
-                    subsequence = []
-
-                    # deleting empty measure and skipping to the next one
-                    if measure.highestOffset == 0.0:
+                    # in case if the object is not a measure, it's discarded
+                    if type(measure) is not mu.stream.Measure:
                         measures.remove(measure)
                         continue
+
+                    # deleting empty measure and skipping to the next one
+                    if measure.notes.highestOffset == 0.0:
+                        measures.remove(measure)
+                        continue
+
+                    # creating subsequence and measures dictionary for each measure
+                    # dictionary is created and cleared but used only if uniform is False
+                    subsequence = []
+                    metronomes = {}
 
                     # detecting changes in time signatures
                     if measure.timeSignature is not None:
@@ -79,36 +99,53 @@ class StreamHandler:
 
                     # tag_line is a list composed of "instruction values"
                     # that are found at the very beginning of every input vector
-                    tag_line = [float(measure.offset), program, is_drum, metronome,
+                    tag_line = [float(measure.offset), program, is_drum,
                                 float(time_signature.numerator), float(time_signature.denominator)]
-                    tag_line += ([0.0] * (subsequence_width - 6))
+                    tag_line += ([0.0] * (subsequence_width - TAG_LINE_LEN))
                     subsequence.append(tag_line)
+
+                    # extracting metronome boundaries for each measure
+                    # as they have different offsets compared to the initial metronome boundaries check
+                    if uniform is False:
+                        boundaries = measure.metronomeMarkBoundaries()
+                        for boundary in boundaries:
+                            metronomes[float(boundary[0])] = boundary[2].number
 
                     # adding elements to subsequence
                     for element in measure.notes.sorted:
-                        line = [float(element.offset), float(element.quarterLength)]
+                        offset = float(element.offset)
+                        if uniform is False:
+                            key = min(metronomes.keys(), key=lambda x: abs(x-offset))
+                            metronome = metronomes[key]
+                        length = float(element.quarterLength)
+                        line = [offset, metronome, length]
                         # adding cord pitches to width
                         for pitch in element.pitches:
                             line.append(float(pitch.midi))
 
                         # zero-padding width
                         diff = subsequence_width - len(line)
-                        for i in range(abs(diff)):
-                            if diff > 0:
+                        if diff > 0:
+                            for i in range(diff):
                                 line.append(0.0)
-                            else:
+                        if diff < 0:
+                            if len(line) > highest_width_loss:
+                                highest_width_loss = len(line)
+                            for i in range(abs(diff)):
                                 line.pop()
-                                print("Subsequence width (" + str(subsequence_width) + ") may result in data losses.")
+
                         subsequence.append(line)
 
                     # zero-padding length
                     diff = subsequence_length + 1 - len(subsequence)
-                    for i in range(abs(diff)):
-                        if diff > 0:
+                    if diff > 0:
+                        for i in range(diff):
                             subsequence.append([0.0] * subsequence_width)
-                        else:
+                    elif diff < 0:
+                        if len(subsequence) - 1 > highest_length_loss:
+                            highest_length_loss = len(subsequence) - 1
+                        for i in range(abs(diff)):
                             subsequence.pop()
-                            print("Subsequence length (" + str(subsequence_length) + ") may result in data losses.")
 
                     subsequences.append(subsequence)
 
@@ -122,11 +159,18 @@ class StreamHandler:
                         self.__input.append(past_subsequence)
                         self.__target.append(subsequence)
                     past_subsequence = subsequence
-                    expected_offset = current_offset + (tag_line[4]/tag_line[5]*4)
+                    expected_offset = current_offset + (tag_line[3]/tag_line[4]*4)
 
                 print_progress(progress+1, end, prefix=pf, suffix=sequence)
+
+            if highest_width_loss > 0:
+                print("Subsequence width (" + str(subsequence_width) + ") may result in data losses. "
+                      "Minimum width of " + str(highest_width_loss) + " is recommended")
+            if highest_length_loss > 0:
+                print("Subsequence length (" + str(subsequence_length) + ") may result in data losses. "
+                      "Minimum length of " + str(highest_length_loss) + " is recommended")
         else:
-            print("Subsequence width (" + str(subsequence_width) + ") cannot be smaller than 6")
+            print("Subsequence width (" + str(subsequence_width) + ") cannot be smaller than " + str(TAG_LINE_LEN))
 
     def get_data(self):
         # data is converted into tensorflow tensors
