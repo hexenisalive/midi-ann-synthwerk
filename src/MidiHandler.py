@@ -22,11 +22,12 @@ class SplitterThread(th.Thread):
             self.__splitter.split_midi(file)
 
 
-class ReassignerThread(th.Thread):
-    def __init__(self, reassign_handler, split_path, queue, th_id):
+class SequencerThread(th.Thread):
+    def __init__(self, reassign_handler, split_path, sequences, queue, th_id):
         th.Thread.__init__(self)
         self.__reassign_handler = reassign_handler
         self.__split_path = split_path
+        self.__sequences = sequences
         self.__queue = queue
         self.__id = th_id
 
@@ -35,6 +36,7 @@ class ReassignerThread(th.Thread):
             file = self.__queue.get()
             sequence = mu.converter.parse(self.__split_path + file)
             self.__reassign_handler(sequence, file)
+            self.__sequences.append(sequence)
 
 # CLASSES ---------------------------------------
 
@@ -66,6 +68,7 @@ class MidiHandler:
               str(len(listdir(self.__split_path))) + " files found)")
         print("Drum splitting is " + self.__splitter.drum_splitter_status() + ".")
         print("Uniform tempo is " + self.__splitter.uniform_tempo_status() + ".")
+        print("Keys found in splitter dictionary: " + str(len(self.__splitter.instruments_dict.keys())))
 
     def toggle_drum_splitter(self):
         self.__splitter.extract_drums = not self.__splitter.extract_drums
@@ -122,7 +125,7 @@ class MidiHandler:
 
         # assign threads to work queue
         for i in range(self.threads):
-            thread = ReassignerThread(self.__reassign_program, self.__split_path, work_queue, i)
+            thread = SequencerThread(self.__reassign_program, self.__split_path, self.__sequences, work_queue, i)
             thread.start()
             work_threads.append(thread)
 
@@ -135,7 +138,7 @@ class MidiHandler:
             thread.join()
         work_threads.clear()
         t1 = time.time()
-        print("Finished reassigning in " + str(t1-t0) + " seconds.")
+        print("Finished creating sequences in " + str(t1-t0) + " seconds.")
 
     def regenerate_midis(self, generate_txt: bool = False):
         """
