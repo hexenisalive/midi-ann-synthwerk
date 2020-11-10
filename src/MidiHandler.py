@@ -8,6 +8,8 @@ import threading as th
 import queue as qu
 import time
 
+THREAD_NUMBER = 4
+
 
 class SplitterThread(th.Thread):
     def __init__(self, splitter, queue, th_id):
