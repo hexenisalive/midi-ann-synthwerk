@@ -4,41 +4,6 @@ from os import listdir, remove
 from copy import deepcopy
 from utilities import print_progress
 from file import stream_to_file, save_file, load_file
-import threading as th
-import queue as qu
-import time
-
-THREAD_NUMBER = 4
-
-
-class SplitterThread(th.Thread):
-    def __init__(self, splitter, queue, th_id):
-        th.Thread.__init__(self)
-        self.__splitter = splitter
-        self.__queue = queue
-        self.__id = th_id
-
-    def run(self):
-        while not self.__queue.empty():
-            file = self.__queue.get()
-            self.__splitter.split_midi(file)
-
-
-class ReassignerThread(th.Thread):
-    def __init__(self, reassign_handler, split_path, queue, th_id):
-        th.Thread.__init__(self)
-        self.__reassign_handler = reassign_handler
-        self.__split_path = split_path
-        self.__queue = queue
-        self.__id = th_id
-
-    def run(self):
-        while not self.__queue.empty():
-            file = self.__queue.get()
-            sequence = mu.converter.parse(self.__split_path + file)
-            self.__reassign_handler(sequence, file)
-
-# CLASSES ---------------------------------------
 
 
 class MidiHandler:
@@ -47,12 +12,11 @@ class MidiHandler:
     The preparation consist of generating music21 sequences for each instrument
     found in input files.
     """
-    def __init__(self, threads: int = 2):
+    def __init__(self):
         self.__sequences = []
         self.__input_path = "..\\MIDIs\\input\\"
         self.__split_path = "..\\MIDIs\\parts\\"
         self.__regen_path = "..\\MIDIs\\regen\\"
-        self.threads = threads
         self.__splitter = MidiSplitter(self.__input_path, self.__split_path)
 
     def backup(self):
@@ -91,53 +55,27 @@ class MidiHandler:
         # Input files are split into multiple instrument tracks and saved as separate MIDIs.
         input_files = listdir(self.__input_path)
 
-        work_queue = qu.Queue()
-        work_threads = []
+        pf = "Splitting MIDI files:"
+        end = len(input_files)
 
-        t0 = time.time()
-        # create work queue
-        for file in input_files:
-            work_queue.put(file)
+        for progress, file in enumerate(input_files):
+            print_progress(progress, end, prefix=pf, suffix=file)
+            self.__splitter.split_midi(file)
+            print_progress(progress + 1, end, prefix=pf, suffix=file)
 
-        # assign threads to work queue
-        for i in range(self.threads):
-            thread = SplitterThread(self.__splitter, work_queue, i)
-            thread.start()
-            work_threads.append(thread)
-
-        # wait till queue finishes
-        while not work_queue.empty():
-            pass
-
-        # join and clear threads
-        for thread in work_threads:
-            thread.join()
-        work_threads.clear()
-        t1 = time.time()
-        print("Finished splitting in " + str(t1-t0) + " seconds")
-
+        # Split files are turned into music21 sequences.
         split_files = listdir(self.__split_path)
 
-        t0 = time.time()
-        for file in split_files:
-            work_queue.put(file)
+        pf = "Assigning instruments for parts:"
+        end = len(split_files)
 
-        # assign threads to work queue
-        for i in range(self.threads):
-            thread = ReassignerThread(self.__reassign_program, self.__split_path, work_queue, i)
-            thread.start()
-            work_threads.append(thread)
-
-        # wait till queue finishes
-        while not work_queue.empty():
-            pass
-
-        # join and clear threads
-        for thread in work_threads:
-            thread.join()
-        work_threads.clear()
-        t1 = time.time()
-        print("Finished reassigning in " + str(t1-t0) + " seconds.")
+        for progress, file in enumerate(split_files):
+            print_progress(progress, end, prefix=pf, suffix=file)
+            sequence = mu.converter.parse(self.__split_path + file, quantizePost=True)
+            # Processed sequence is now reassigned its instrument that have potentially lost during conversion.
+            self.__reassign_program(sequence, file)
+            self.__sequences.append(sequence)
+            print_progress(progress + 1, end, prefix=pf, suffix=file)
 
     def regenerate_midis(self, generate_txt: bool = False):
         """
@@ -171,7 +109,9 @@ class MidiHandler:
         :return:
         """
         self.__clear_files(self.__split_path)
+        print("Removing sequences.")
         self.__sequences = []
+        print("Resetting splitter.")
         self.__splitter = MidiSplitter(self.__input_path, self.__split_path)
 
     def __clear_files(self, clear_path):
